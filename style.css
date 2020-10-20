@@ -1,0 +1,270 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  background-color: #272725;
+}
+.padding-section{
+  padding: 40px 0;
+}
+.main_container{
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+}
+/* header */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+}
+header ul li{
+  display: inline-block;
+  padding: 10px;
+}
+header h1{
+  flex: 3;
+}
+header .main_menu{
+  flex: 2;
+}
+header .book_now{
+  flex: .5;
+}
+.button{
+  text-align: center;
+  background-color: #959189;
+  padding: 15px;
+}
+.button:hover{
+  background-color: #807a6e;
+}
+header a{
+  font-size: 17px;
+  font-family: sans-serif;
+}
+ /* main */
+ .main{
+   display: flex;
+   flex-direction: column;
+ }
+ .main h2{
+   font-size: 60px;
+   max-width: 50%;
+   padding: 40px 0;
+ }
+.slide img{
+   max-width: 100%;
+ }
+
+ /* item left and right */
+
+ .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+ }
+ .item .content{
+   padding: 0 50px 0 0;
+ }
+ .item-right .content{
+   padding: 0 0 0 50px;
+ }
+ .item-right .content{
+   order: 2;
+ }
+ .thumbnail img{
+   max-width: 100%;
+   max-height: 786px;
+ }
+ .item h3, .book_a_room h3{
+   font-size: 60px;
+ }
+ .item p{
+   font-size: 25px;
+   line-height: 40px;
+   margin: 25px 0 25px 0;
+ }
+ .item a{
+   display: block;
+   width: 150px;
+   font-size: 18px;
+ }
+
+ /* bottom */
+ .reviews{
+   display: flex;
+   justify-content: space-between;
+ }
+ .review{
+  text-align: left;
+  max-width: 45%;
+ }
+ .review h4{
+  font-size: 40px;
+  margin-bottom: 20px;
+ }
+ .review span{
+  font-size: 20px;
+  font-family: fantasy;
+ }
+
+/* stay with us */
+.book_a_room {
+  background-color: #959189;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 350px;
+}
+.book_a_room h3{
+  margin-bottom: 30px;
+}
+.book_a_room .button{
+  padding: 20px 60px;
+  font-size: 20px;
+  width: 300px;
+  background-color: #FFFFFF;
+  color: #959189;
+}
+
+footer{
+  display: flex;
+  font-family: sans-serif;
+  height: 250px;
+  align-items: center;
+}
+.left_footer{
+  flex: 4;
+}
+.middle_footer{
+  flex: 1;
+}
+.right_footer{
+  flex: 1;
+  text-align: right;
+}
+.left_footer h1{
+  margin-bottom: 40px;
+}
+.left_footer ul li{
+  display: inline-block;
+  padding-right: 20px;
+}
+.left_footer i{
+  font-size: 20px;
+}
+.middle_footer li a, footer span{
+  border-bottom: 1px solid #959189;
+  color: #959189;
+  margin-bottom: 5px;
+}
+.middle_footer li{
+  margin-bottom: 10px;
+}
+
+/* menu  bar */
+
+.menu_button{
+  position: absolute;
+  right: 50px;
+  top: 47px;
+  cursor: pointer;
+  display: none;
+}
+.menu_button i{
+  font-size: 25px;
+}
+
+@media (max-width: 1140px){
+  .main h2{
+    font-size: 40px;
+    max-width: 100%;
+  }
+  .menu_button{
+    display: block;
+  }
+  header h1{
+    flex: 2;
+  }
+  .main_menu{
+    display: block;
+    position: absolute;
+    background: rgba(242, 242, 242, 0.87);
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    border-right: 1px solid #f2f2f2;
+    transform: translateX(-500px);
+    transition: transform .3s;
+  }
+  .show {
+    transform: translateX(-20px);
+  }
+  .main_menu ul li{
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid rgba(173, 173, 173, 1);
+  }
+  .main_menu ul li a, .main_menu ul li i {
+    color: #333;
+    font-size: 16px;
+  }
+  header a{
+    flex: 1;
+  }
+  .main h3, .main h4, .book_a_room h3{
+    font-size: 30px;
+  }
+  .main p{
+    font-size: 20px;
+  }
+  header .book_now{
+    margin-right: 60px;
+    flex: .5;
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px){
+  .item {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .item .thumbnail{
+    margin-top: 40px;
+  }
+  .item .content {
+    order:1;
+    padding: 0;
+  }
+  .item .thumbnail {
+    order:2;
+    padding: 0;
+  }
+  footer{
+    flex-direction: column;
+  }
+  .left_footer ul{
+    text-align: center;
+  }
+  .left_footer ul li{
+    padding: 10px;
+  }
+  .middle_footer ul li{
+    display: inline-block;
+  }
+}
