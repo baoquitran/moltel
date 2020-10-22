@@ -240,6 +240,13 @@ footer{
   }
 }
 @media (max-width: 500px){
+  .menu_button {
+    right: 20px;
+  }
+  header .book_now {
+    margin-right: 40px;
+    flex: 1;
+  }
   .item {
     flex-direction: column;
     padding: 20px 0;
